@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club Gouvernance Participative</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #0B3C5D;
+        }
+
+        .logo span {
+            white-space: nowrap;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* MENU */
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0B3C5D;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #D9A441;
+        }
+
+        /* BOUTON MENU MOBILE */
+
+        .menu-btn {
+            display: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #D9A441;
+
+        }
+
+        /* ================= TABLETTE ================= */
+
+        @media(max-width:992px) {
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav ul {
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:768px) {
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+                max-width: 80%;
+            }
+
+            .logo span {
+                font-size: 16px;
+                line-height: 1.3;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                right: 20px;
+                width: 260px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                background: white;
+                padding: 25px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                font-size: 15px;
+                width: 100%;
+            }
+        }
+
+        /* ================= PETITS TELEPHONES ================= */
+
+        @media(max-width:480px) {
+
+            .logo {
+                gap: 10px;
+            }
+
+            .logo-img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .logo span {
+                font-size: 14px;
+            }
+
+            nav {
+                width: 220px;
+                right: 10px;
+            }
+        }
+
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(rgba(4, 25, 45, 0.75), rgba(4, 25, 45, 0.75)),
+                url('WhatsApp Image 2026-05-10 at 12.36.13(4).jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #f0f0f0;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #D9A441;
+            color: black;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0B3C5D;
+        }
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            color: #328CC1;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 48px;
+            margin-top: 15px;
+            color: #0B3C5D;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.9;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .bureau {
+            background: #f7f7f7;
+        }
+
+        .bureau-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+        }
+
+        .bureau-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .bureau-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .bureau-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .bureau-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .bureau-content h3 {
+            font-size: 26px;
+            color: #0B3C5D;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            color: #D9A441;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .bureau-content p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #0B3C5D;
+            color: white;
+        }
+
+        .card h3 {
+            margin: 20px 0;
+            font-size: 25px;
+        }
+
+        .card p {
+            line-height: 1.8;
+        }
+
+        .icon {
+            font-size: 55px;
+        }
+
+        .stats {
+            background: #0B3C5D;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 60px;
+            color: #D9A441;
+        }
+
+        .stat p {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .themes .card {
+            background: linear-gradient(135deg, #0B3C5D, #328CC1);
+            color: white;
+        }
+
+        .events {
+            background: #f7f7f7;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 30px;
+        }
+
+        .event-content h3 {
+            margin: 15px 0;
+            color: #0B3C5D;
+            font-size: 24px;
+        }
+
+        .event-content p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .contact {
+            background: #0B3C5D;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-box {
+            background: white;
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 25px;
+        }
+
+
+        /* ===== RESEAUX SOCIAUX MODERNES ===== */
+
+        .socials {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .social-link {
+            text-decoration: none;
+            background: #f7f7f7;
+            color: #0B3C5D;
+            padding: 18px 22px;
+            border-radius: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 17px;
+        }
+
+        .social-link i {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0B3C5D;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: #0B3C5D;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-link:hover i {
+            background: #D9A441;
+            color: black;
+        }
+
+        footer {
+            background: black;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        @media(max-width:900px) {
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .section-title h2 {
+                font-size: 35px;
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer {
+                background: linear-gradient(135deg, #0B3C5D, #04192D);
+                color: white;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .footer-content {
+                max-width: 900px;
+                margin: auto;
+            }
+
+            .footer h3 {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+
+            .footer p {
+                color: #dcdcdc;
+                line-height: 1.8;
+                margin-bottom: 10px;
+            }
+
+            .footer-info {
+                margin: 20px 0;
+                font-weight: 600;
+                color: #D9A441;
+            }
+
+            .footer-bottom {
+                margin-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                padding-top: 20px;
+                font-size: 14px;
+                color: #bbb;
+            }
+
+
+            .footer-bottom .credit span {
+                color: #D9A441;
+                font-weight: 700;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo" style="display:flex; align-items:center; gap:15px;">
+                <img src="WhatsApp Image 2026-05-10 at 12.36.34.jpeg" alt="Logo" class="logo-img">
+                <span>Gouvernance Participative</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#valeurs">Valeurs</a></li>
+                    <li><a href="#themes">Objectits</a></li>
+                    <li><a href="#events">attentes et équipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Club de Réflexion sur la Gouvernance Participative</h1>
+
+            <p>
+                Une initiative étudiante pour renforcer la décentralisation et le développement local au Sénégal.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="btn btn-primary">Rejoindre le club</a>
+                <a href="#apropos" class="btn btn-secondary">Découvrir</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos">
+        <div class="container about">
+
+            <div class="about-text">
+                <div class="section-title" style="text-align:left; margin-bottom:30px;">
+                    <span>Qui sommes-nous ?</span>
+                    <h2>Une plateforme de réflexion citoyenne</h2>
+                </div>
+
+                <p>
+                    Le Club de Réflexion sur la Gouvernance Participative (CRGP) est un espace citoyen porté par des
+                    jeunes engagés, soucieux de promouvoir la gouvernance locale inclusive, la participation citoyenne
+                    et le développement durable des territoires.
+                </p>
+                <p>Des jeunes réunis autour de valeurs fortes: Engagement communautaire, Citoyenneté active,
+                    Responsablité et solidarité et inclusion</p>
+
+                <p>
+                    Nous encourageons les débats constructifs, les échanges d’idées et la co-construction de solutions
+                    innovantes pour une gouvernance plus transparente et inclusive.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">Nous contacter</a>
+            </div>
+
+            <div>
+                <img src="WhatsApp Image 2026-05-10 at 12.36.13(2).jpeg" alt="Réunion citoyenne">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="valeurs" style="background: linear-gradient(white, #0B3C5D),
+    url('images/valeurs.jpg');">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Vision et Missions</span>
+                <h2>Engager la participation pour un développement territorial soutenu</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">🤝</div>
+                    <h3>Regrouper</h3>
+                    <p>Rassembler les étudiants pour une meilleure appréhension de la décentralisation et du
+                        développement local.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📘</div>
+                    <h3>Informer</h3>
+                    <p>Encourager les bonnes pratiques pour le développement local.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💬</div>
+                    <h3>Contribuer</h3>
+                    <p>Améliorer la compréhension de la décentralisation pour tous les acteurs.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h3>Consolider</h3>
+                    <p>Créer des partenaires pour organiser des activités autour de la gouvernance participative.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="stats">
+        <h1 style="color: #D9A441;margin-left: 45%;">🏛️COMPOSITION</h1>
+        <div class="container stats-grid">
+            <span style="text-align: center;font-size: xx-large;color: #D9A441;"></span>
+
+
+            <div class="stat">
+                <h3>C</h3>
+                <p>Etudiants de l'institut de gouvernance Territoriale (IGT-UCAD)</p>
+            </div>
+
+            <div class="stat">
+                <h3>R</h3>
+                <p>Etudiants et professionnels intervenant dans la décentralisation</p>
+            </div>
+
+            <div class="stat">
+                <h3>G</h3>
+                <p>Jeunes leaders oeuvrant pour la décentralisation et la participation citoyenne</p>
+            </div>
+
+            <div class="stat">
+                <h3>P</h3>
+                <p>Tous autres domaines équivalent</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(white , #0B3C5D);" class="themes" id="themes">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Objectits et axex stratégiques</span>
+                <h2>Nos thématiques prioritaires</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">🏛️</div>
+                    <h3>Renforcement des capacités</h3>
+                    <p>Former les jeunes sur les enjeux de la gouvernance participative.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🗳️</div>
+                    <h3>Plaidoyer citoyen</h3>
+                    <p>Mener des plaidoyer pour une meilleure prise en comptedes citoyensdans les politiques publiques
+                        locales.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">👥</div>
+                    <h3>Dialogue territorial</h3>
+                    <p>organiser des activités de réflexion et d'engagement citoyen entre acteurs territoriaux et
+                        populations.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h3>Dynamisation des structures locales</h3>
+                    <p>Encourager la création et le dynamisme des conseils de quartier et autres structures locales.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💡</div>
+                    <h3>Promotion de la Citoyenneté active</h3>
+                    <p>sensibiliser les populations sur leurs droits et devoirs civiques.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📈</div>
+                    <h3>Renforcement de la gouvernance participative locale</h3>
+                    <p>Accompagner les collectivités dans l'élaboration et le suivi des projets.
+                        promouvoirla transparence, la redevabilité et le dialogue citoyen.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💻</div>
+                    <h3>Formation et leadership jeunes</h3>
+                    <p>Encourager l'engagement des jeunes à travers des programmes de leadership.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(white , #0B3C5D);" class="events" id="events">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Activités</span>
+                <h2>Résultats attendus</h2>
+            </div>
+
+            <div class="event-grid">
+
+                <div class="event-card">
+                    <img src="WhatsApp Image 2026-05-10 at 12.36.12(2).jpeg" alt="Forum">
+
+                    <div class="event-content">
+                        <h3>Mobilisation étudiante et Sensibilastion</h3>
+                        <p> Regrouper le maximum d'étudiants autour de la réflexion au CRGP.
+                        </p>
+                        <p> Les bonnes pratiques en développement local sont adoptées par les acteurs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="WhatsApp Image 2026-05-10 at 12.36.14 (copie).jpeg" alt="Atelier">
+
+                    <div class="event-content">
+
+                        <h3>compréhension</h3>
+                        <p>
+                            Meilleure maitrise des concepts clés de la décentralisation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="WhatsApp Image 2026-05-10 at 12.36.10.jpeg" alt="Débat">
+
+                    <div class="event-content">
+
+                        <h3>Partenariats</h3>
+                        <p>
+                            Discussion ouverte sur l’engagement des jeunes dans les processus démocratiques
+                            Adhésion de partenaires pour organiser des activités dans tout le pays .
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section style="background: linear-gradient(#0B3C5D,white );" class="bureau" id="bureau">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span style="color: white;">Notre équipe</span>
+                <h2 style="color: white;">Bureau Exécutif</h2>
+            </div>
+
+            <div class="bureau-grid">
+
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 18.27.17(2).jpeg" alt="Président">
+
+                    <div class="bureau-content">
+                        <h3>Fatou faye</h3>
+                        <p class="role">Présidente du Club</p>
+                    </div>
+                </div>
+
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 17.50.40.jpeg" alt="Vice Président">
+
+                    <div class="bureau-content">
+                        <h3>Moussa Ba</h3>
+                        <p class="role">Secrétaire Général</p>
+                    </div>
+                </div>
+
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 21.57.28.jpeg" alt="Secrétaire Général">
+
+                    <div class="bureau-content">
+                        <h3>Adama penda ly</h3>
+                        <p class="role">Résponsable projets</p>
+                    </div>
+                </div>
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 21.57.27(1).jpeg" alt="Secrétaire Général">
+
+                    <div class="bureau-content">
+                        <h3>Anna Grace Ba</h3>
+                        <p class="role">Responasable finance</p>
+                    </div>
+                </div>
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 17.50.40(1).jpeg" alt="Secrétaire Général">
+
+                    <div class="bureau-content">
+                        <h3>Marie M. Diouf</h3>
+                        <p class="role">Responsable Communication</p>
+                    </div>
+                </div>
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 17.50.41.jpeg" alt="Secrétaire Général">
+
+                    <div class="bureau-content">
+                        <h3>Mamadou S Diop</h3>
+                        <p class="role">Résponable suivi-Evaluation</p>
+                    </div>
+                </div>
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 21.57.27.jpeg" alt="Secrétaire Général">
+
+                    <div class="bureau-content">
+                        <h3>Abdoulaye Niass</h3>
+                        <p class="role">Résponable Organisation</p>
+                    </div>
+                </div>
+
+                <div class="bureau-card">
+                    <img src="WhatsApp Image 2026-05-11 at 21.57.27(2).jpeg" alt="Responsable Communication">
+
+                    <div class="bureau-content">
+                        <h3>Lonka Diedhiou</h3>
+                        <p class="role">Responsable Partenariat</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+
+            <div>
+                <div class="section-title" style="text-align:left; margin-bottom:30px;">
+                    <span style="color:#D9A441;">Contact</span>
+                    <h2 style="color:white;">Rejoignez notre communauté</h2>
+                    <h1 style="color: #D9A441;">Pourquoi rejoindre Le CRGP ?
+                        <h1 />
+                        <h1>👥 Reseautage</h1>
+
+                        <h1>📘Apprentissage</h1>
+
+                        <h1>🤝Engagement</h1>
+
+                        <h1>🚀Impact</h1>
+
+
+                </div>
+
+                <p style="line-height:1.9; color:#ddd; margin-bottom:35px;">
+                    Vous souhaitez participer à nos activités ou collaborer avec notre club ? Contactez-nous.
+                </p>
+
+                <p style="margin-bottom:15px;">📍IGT-DL Dakar-Mermoz, Sénégal</p>
+                <p style="margin-bottom:15px;">📞 +221 77 911 89 87</p>
+                <p>📧 <a href="mailto:crgp381@gmail.com" style="color:#D9A441; text-decoration:none; font-weight:600;">
+                        crgp381@gmail.com
+                    </a></p>
+            </div>
+
+            <div class="contact-box">
+                <h3 style="margin-bottom:25px; color:#0B3C5D;">
+                    Réseaux sociaux
+                </h3>
+
+                <div class="socials">
+
+                    <a href="https://facebook.com/TON_COMPTE" target="_blank" class="social-link">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Facebook</span>
+
+                    </a>
+
+                   
+                    <a href="https://linkedin.com/in/TON_COMPTE" target="_blank" class="social-link">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+
+                    </a>
+
+                  
+                    <a href="https://wa.me/22177 911 89 87" target="_blank" class="social-link">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <h3>Club de Réflexion sur la Gouvernance Participative</h3>
+
+            <p>
+                Une plateforme dédiée au dialogue citoyen, à l’innovation démocratique et à la participation inclusive.
+            </p>
+
+
+            <div class="footer-bottom">
+                <p>© 2026 Tous droits réservés</p>
+                <p class="credit">Site conçu et développé par
+                <h2 style="color: #D9A441;">Moussa Doumbouya</h2>
+                </p>
+                <p>📧 <a href="mailto:doumbouya30808@gmail.com"
+                        style="color:#D9A441; text-decoration:none; font-weight:600;">
+                        doumbouya30808@gmail.com
+                    </a></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+      
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(11,60,93,0.95)';
+                header.style.transition = '0.4s';
+
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.style.color = '#D9A441';
+                });
+
+                document.querySelector('.logo').style.color = 'white';
+            }
+            else {
+                header.style.background = 'rgba(255,255,255,0.95)';
+
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.style.color = '#0B3C5D';
+                });
+
+                document.querySelector('.logo').style.color = '#0B3C5D';
+            }
+        });
+
+       
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+
+            });
+
+        }, {
+            threshold: 0.15
+        });
+
+        const hiddenElements = document.querySelectorAll('section, .card, .event-card');
+
+        hiddenElements.forEach((el) => {
+            el.classList.add('hidden-element');
+            observer.observe(el);
+        });
+
+        // Bouton retour en haut
+        const topButton = document.createElement('button');
+        topButton.innerHTML = '↑';
+        topButton.id = 'topBtn';
+        document.body.appendChild(topButton);
+
+        topButton.style.position = 'fixed';
+        topButton.style.bottom = '30px';
+        topButton.style.right = '30px';
+        topButton.style.width = '55px';
+        topButton.style.height = '55px';
+        topButton.style.border = 'none';
+        topButton.style.borderRadius = '50%';
+        topButton.style.background = '#D9A441';
+        topButton.style.color = '#000';
+        topButton.style.fontSize = '22px';
+        topButton.style.fontWeight = 'bold';
+        topButton.style.cursor = 'pointer';
+        topButton.style.display = 'none';
+        topButton.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        topButton.style.zIndex = '1000';
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 300) {
+                topButton.style.display = 'block';
+            }
+            else {
+                topButton.style.display = 'none';
+            }
+
+        });
+
+        topButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ================= MENU MOBILE =================
+
+        const navMenu = document.querySelector('nav ul');
+
+        const menuBtn = document.createElement('div');
+        menuBtn.innerHTML = '☰';
+        menuBtn.classList.add('menu-btn');
+
+        document.querySelector('.navbar').appendChild(menuBtn);
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fermer menu après clic
+
+        document.querySelectorAll('nav a').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                if (window.innerWidth < 768) {
+                    navMenu.classList.remove('active');
+                }
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        .hidden-element {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+</body>
+
+</html>
