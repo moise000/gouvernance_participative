@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://club-reflexion-gouv-part.com/sitemap.xml
