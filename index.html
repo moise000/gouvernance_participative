@@ -396,27 +396,52 @@
         .icon {
             font-size: 55px;
         }
+.stats {
+            position: relative;
+            padding: 120px 20px;
+            background:
+                linear-gradient(rgba(4, 25, 45, 0.82), rgba(4, 25, 45, 0.82)),
+                url('WhatsApp Image 2026-05-12 at 23.34.04.jpeg');
 
-        .stats {
-            background: #0B3C5D;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
             color: white;
+            overflow: hidden;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit);
             gap: 40px;
             text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 35px 25px;
+            border-radius: 25px;
+            backdrop-filter: blur(6px);
+            transition: 0.4s;
+        }
+
+        .stat:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .stat h3 {
             font-size: 60px;
             color: #D9A441;
+            margin-bottom: 15px;
         }
 
         .stat p {
-            margin-top: 15px;
-            font-size: 20px;
+            line-height: 1.8;
+            font-size: 17px;
         }
 
         .themes .card {
