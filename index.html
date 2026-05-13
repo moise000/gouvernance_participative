@@ -90,6 +90,22 @@
             color: #D9A441;
         }
 
+        nav a.active {
+            color: #D9A441 !important;
+            position: relative;
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #D9A441;
+            left: 0;
+            bottom: -6px;
+            border-radius: 10px;
+        }
+
         /* BOUTON MENU MOBILE */
 
         .menu-btn {
@@ -396,7 +412,8 @@
         .icon {
             font-size: 55px;
         }
-.stats {
+
+        .stats {
             position: relative;
             padding: 120px 20px;
             background:
@@ -505,10 +522,11 @@
         }
 
         .contact-box {
-            background: white;
+            background: linear-gradient(#0B3C5D ,#D9A441);
             color: #1a1a1a;
             padding: 40px;
             border-radius: 25px;
+            border-top: solid 7px white;
         }
 
 
@@ -673,16 +691,19 @@
         <div class="navbar">
             <div class="logo" style="display:flex; align-items:center; gap:15px;">
                 <img src="WhatsApp Image 2026-05-10 at 12.36.34.jpeg" alt="Logo" class="logo-img">
-                <span>Gouvernance Participative</span>
+                <span>CRGP</span>
             </div>
 
             <nav>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#video">Présentation</a></li>
                     <li><a href="#valeurs">Valeurs</a></li>
+                    <li><a href="#composition">CRGP</a></li>
                     <li><a href="#themes">Objectits</a></li>
-                    <li><a href="#events">Attentes et Equipes</a></li>
+                    <li><a href="#events">Attentes</a></li>
+                    <li><a href="#bureau">Equipes</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -719,7 +740,7 @@
                     et le développement durable des territoires.
                 </p>
                 <p>Des jeunes réunis autour de valeurs fortes: Engagement communautaire, Citoyenneté active,
-                    Responsablité, solidarité et inclusion</p>
+                    Responsablité et solidarité et inclusion</p>
 
                 <p>
                     Nous encourageons les débats constructifs, les échanges d’idées et la co-construction de solutions
@@ -731,6 +752,28 @@
 
             <div>
                 <img src="WhatsApp Image 2026-05-10 at 12.36.13(2).jpeg" alt="Réunion citoyenne">
+            </div>
+
+        </div>
+
+
+    </section>
+    <section id="video" style="background: linear-gradient(#0B3C5D,white  );" ; padding:100px 20px;>
+        <div class="container">
+
+            <div class="section-title">
+                <span style="color: white;">Présentation</span>
+                <h2 style="color: white;">Découvrez notre club en vidéo</h2>
+            </div>
+
+            <div
+                style="max-width:900px; margin:auto; border-radius:25px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+
+                <video controls autoplay muted loop style="width:100%; display:block;">
+                    <source src="leçons de vie train.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+
             </div>
 
         </div>
@@ -777,7 +820,7 @@
         </div>
     </section>
 
-    <section class="stats">
+    <section class="stats" id="composition">
         <div class="container stats-grid">
             <span style="text-align: center;font-size: xx-large;color: #D9A441;"></span>
 
@@ -801,6 +844,7 @@
                 <h3>P</h3>
                 <p>Tous autres domaines équivalent</p>
             </div>
+
 
         </div>
     </section>
@@ -851,7 +895,7 @@
                     <div class="icon">📈</div>
                     <h3>Renforcement de la gouvernance participative locale</h3>
                     <p>Accompagner les collectivités dans l'élaboration et le suivi des projets.
-                        promouvoir la transparence, la redevabilité et le dialogue citoyen.
+                        promouvoirla transparence, la redevabilité et le dialogue citoyen.
                     </p>
                 </div>
 
@@ -959,7 +1003,7 @@
 
                     <div class="bureau-content">
                         <h3>Anna Grace Ba</h3>
-                        <p class="role">Responsable finance</p>
+                        <p class="role">Responasable finance</p>
                     </div>
                 </div>
                 <div class="bureau-card">
@@ -975,7 +1019,7 @@
 
                     <div class="bureau-content">
                         <h3>Mamadou S Diop</h3>
-                        <p class="role">Résponsable suivi-Evaluation</p>
+                        <p class="role">Résponable suivi-Evaluation</p>
                     </div>
                 </div>
                 <div class="bureau-card">
@@ -983,7 +1027,7 @@
 
                     <div class="bureau-content">
                         <h3>Abdoulaye Niass</h3>
-                        <p class="role">Résponsable Organisation</p>
+                        <p class="role">Résponable Organisation</p>
                     </div>
                 </div>
 
@@ -1034,7 +1078,7 @@
             </div>
 
             <div class="contact-box">
-                <h3 style="margin-bottom:25px; color:#0B3C5D;">
+                <h3 style="margin-bottom:25px; color:white;">
                     Réseaux sociaux
                 </h3>
 
@@ -1058,7 +1102,7 @@
                   
                     <a href="https://wa.me/22177 911 89 87" target="_blank" class="social-link">
 
-                        <i class="fa-brands fa-whatsapp"></i>
+                        <i style="background: rgb(8, 214, 8);" class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp</span>
 
                     </a>
@@ -1097,7 +1141,7 @@
 
     <script>
 
-      
+
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
 
@@ -1122,7 +1166,7 @@
             }
         });
 
-       
+
         const observer = new IntersectionObserver((entries) => {
 
             entries.forEach(entry => {
@@ -1206,6 +1250,35 @@
 
                 if (window.innerWidth < 768) {
                     navMenu.classList.remove('active');
+                }
+
+            });
+
+        });
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        window.addEventListener("scroll", () => {
+
+            let current = "";
+
+            sections.forEach(section => {
+
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+
+            });
+
+            navLinks.forEach(link => {
+
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
                 }
 
             });
