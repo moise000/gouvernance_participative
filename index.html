@@ -4,21 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Club de Réflexion sur la Gouvernance Participative au Sénégal. Plateforme de jeunes engagés pour la démocratie locale, la décentralisation et le développement territorial.">
-    <meta name="keywords" content="gouvernance, Sénégal, décentralisation, UCAD, participation citoyenne, club étudiant">
-    <meta name="author" content="CRGP">
-   <meta property="og:title" content="CRGP - Gouvernance Participative">
-   <meta property="og:description" content="Club étudiant engagé pour la gouvernance participative et le développement local au Sénégal.">
-   <meta property="og:image" content="https://club-reflexion-gouv-part.com/ton-image.jpg">
-   <meta property="og:url" content="https://club-reflexion-gouv-part.com">
-   <meta property="og:type" content="website">
-
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-   <meta http-equiv="X-Frame-Options" content="DENY">
-   <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Club Gouvernance Participative</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +18,152 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
+        }
+
+        
+
+        #partenaires {
+            background: #f7f7f7;
+            padding: 100px 20px;
+        }
+
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .partner-card {
+            width: 220px;
+            height: 120px;
+            background: white;
+            border-radius: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: #D9A441 solid 5px;
+            border-right: #0B3C5D solid 5px;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .partner-card img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* TABLETTE */
+
+        @media(max-width:768px) {
+
+            .partners-grid {
+                gap: 20px;
+            }
+
+            .partner-card {
+                width: 170px;
+                height: 95px;
+            }
+
+            .partner-card img {
+                max-height: 55px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media(max-width:480px) {
+
+            .partners-grid {
+                gap: 15px;
+            }
+
+            .partner-card {
+                width: 140px;
+                height: 80px;
+                padding: 10px;
+            }
+
+            .partner-card img {
+                max-height: 40px;
+            }
+
+        }
+
+        /* ================= MOT PRESIDENTE ================= */
+
+        .mot-presidente {
+            margin-top: 70px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 45px;
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            border-left: 6px solid #D9A441;
+            text-align: center;
+        }
+
+        .mot-badge {
+            display: inline-block;
+            background: #D9A441;
+            color: black;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .mot-presidente h3 {
+            color: white;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .mot-presidente p {
+            color: #f0f0f0;
+            line-height: 2;
+            font-size: 17px;
+            max-width: 900px;
+            margin: auto auto 18px;
+        }
+
+        .signature {
+            color: #D9A441 !important;
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 25px !important;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .mot-presidente {
+                padding: 30px 20px;
+            }
+
+            .mot-presidente h3 {
+                font-size: 30px;
+            }
+
+            .mot-presidente p {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
         }
 
         body {
@@ -360,7 +491,18 @@
         }
 
         .bureau {
-            background: #f7f7f7;
+            position: relative;
+            padding: 120px 20px;
+            background:
+                linear-gradient(rgba(4, 25, 45, 0.82), rgba(4, 25, 45, 0.82)),
+                url('WhatsApp Image 2026-05-12 at 23.34.04.jpeg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: white;
+            overflow: hidden;
         }
 
         .bureau-grid {
@@ -441,6 +583,7 @@
 
             color: white;
             overflow: hidden;
+
         }
 
         .stats-grid {
@@ -450,6 +593,7 @@
             text-align: center;
             position: relative;
             z-index: 2;
+
         }
 
         .stat {
@@ -479,7 +623,7 @@
         }
 
         .themes .card {
-           background: linear-gradient(135deg, #0B3C5D);
+            background: linear-gradient(135deg, #0B3C5D);
             color: white;
             position: relative;
             padding: 120px 20px;
@@ -553,7 +697,7 @@
         }
 
         .contact-box {
-            background: linear-gradient(#0B3C5D ,#D9A441);
+            background: linear-gradient(#0B3C5D, #D9A441);
             color: #1a1a1a;
             padding: 40px;
             border-radius: 25px;
@@ -723,7 +867,7 @@
             <div class="logo" style="display:flex; align-items:center; gap:15px;">
                 <span>CRG</span>
                 <img src="WhatsApp Image 2026-05-10 at 12.36.34.jpeg" alt="Logo" class="logo-img">
-                <span>Participative</span>
+                <span>Paricipative</span>
             </div>
 
             <nav>
@@ -801,7 +945,7 @@
             <div
                 style="max-width:900px; margin:auto; border-radius:25px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
 
-              <video controls style="width:100%; display:block;">
+                <video controls style="width:100%; display:block;">
                     <source src="WhatsApp Video 2026-05-13 at 20.04.03.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéo.
                 </video>
@@ -993,7 +1137,7 @@
 
         </div>
     </section>
-    <section style="background: linear-gradient(#0B3C5D);" class="bureau" id="bureau">
+    <section class="bureau" id="bureau">
 
         <div class="container">
 
@@ -1073,6 +1217,51 @@
                 </div>
 
             </div>
+            <!-- MOT DE LA PRESIDENTE -->
+
+            <div class="mot-presidente">
+
+                <span class="mot-badge">
+                    Mot de la Présidente
+                </span>
+
+                <h3>Fatou Faye</h3>
+
+                <p>
+                    Chers étudiants, partenaires et citoyens engagés,
+                </p>
+
+                <p>
+                    Le Club de Réflexion sur la Gouvernance Participative est né d’une volonté commune :
+                    créer un espace de dialogue, d’apprentissage et d’engagement autour des enjeux
+                    de gouvernance locale et de participation citoyenne.
+                </p>
+
+                <p>
+                    Notre ambition est de mobiliser les jeunes autour des valeurs de responsabilité,
+                    d’inclusion et de développement territorial durable afin de contribuer positivement
+                    à l’avenir de nos collectivités.
+                </p>
+
+                <p>
+                    Ensemble, nous croyons qu’une jeunesse consciente, formée et engagée peut jouer
+                    un rôle essentiel dans la construction d’une gouvernance plus transparente,
+                    participative et efficace.
+                </p>
+                <p>
+                    Je suis honorée de vous accueillir sur notre nouveau site. À travers ce club, nous voulons
+                    donner la parole aux jeunes et aux citoyens sur la gouvernance de nos territoires.
+                    Ensemble, nous croyons en une gouvernance plus participative et à l’innovation citoyenne.
+                    Je vous invite à découvrir nos projets, à rejoindre nos réflexions et à prendre part activement à
+                    nos prochains ateliers.
+                    C’est en agissant collectivement que nous ferons progresser les défis locaux du Sénégal.
+                </p>
+
+                <p class="signature">
+                    Fatou Faye — Présidente du CRGP
+                </p>
+
+            </div>
 
         </div>
 
@@ -1104,7 +1293,7 @@
 
                 <p style="margin-bottom:15px;">📍IGT-DL Dakar-Mermoz, Sénégal</p>
                 <p style="margin-bottom:15px;">📞 +221 77 911 89 87</p>
-                <p style="margin-bottom:15px;">📞 +221 76 447 09 76</p>
+                <p style="margin-bottom:15px;">📞 +221 77 911 89 87</p>
 
                 <p>📧 <a href="mailto:crgp381@gmail.com" style="color:#D9A441; text-decoration:none; font-weight:600;">
                         crgp381@gmail.com
@@ -1118,24 +1307,25 @@
 
                 <div class="socials">
 
-                    <a href="https://www.facebook.com/people/Club-de-R%C3%A9flexion-Sur-la-Gouvernance-Participative/61566389235488/" target="_blank" class="social-link">
+                    <a href="https://www.facebook.com/people/Club-de-R%C3%A9flexion-Sur-la-Gouvernance-Participative/61566389235488/"
+                        target="_blank" class="social-link">
 
                         <i class="fa-brands fa-facebook-f"></i>
                         <span>Facebook</span>
 
                     </a>
 
-                   
-                    <a href="https://www.linkedin.com/company/club-de-r%C3%A9flexion-sur-la-gouvernance-participative-crgp/" target="_blank" class="social-link">
+
+                    <a href="https://www.linkedin.com/company/club-de-r%C3%A9flexion-sur-la-gouvernance-participative-crgp/"
+                        target="_blank" class="social-link">
 
                         <i class="fa-brands fa-linkedin-in"></i>
                         <span>LinkedIn</span>
 
                     </a>
 
-                  
+
                     <a href="https://wa.me/22177 911 89 87" target="_blank" class="social-link">
-                        
 
                         <i style="background: rgb(8, 214, 8);" class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp</span>
@@ -1146,6 +1336,52 @@
             </div>
 
         </div>
+    </section>
+    <section id="partenaires">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Partenaires</span>
+                <h2>Ils nous accompagnent</h2>
+            </div>
+
+            <div class="partners-grid">
+
+                <div class="partner-card">
+                    <img src="IMG_4045.JPG(1).jpeg" alt="UCAD">
+                </div>
+
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.17.jpeg" alt="IGT">
+                </div>
+
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.18.jpeg" alt="Partenaire 1">
+                </div>
+
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.19.jpeg" alt="Partenaire 2">
+                </div>
+
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.20.jpeg" alt="Partenaire 3">
+                </div>
+
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.21.jpeg" alt="Partenaire 4">
+                </div>
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.22.jpeg" alt="Partenaire 4">
+                </div>
+                <div class="partner-card">
+                    <img src="WhatsApp Image 2026-05-14 at 13.46.22(1).jpeg" alt="Partenaire 4">
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
     <footer class="footer">
