@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        * {
+          body {
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+        }
+         {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -166,12 +173,7 @@
 
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
-            overflow-x: hidden;
-        }
+      
 
 
         header {
@@ -511,48 +513,123 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 35px;
         }
+        /* ================= BUREAU ================= */
 
-        .bureau-card {
-            background: white;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.4s;
-            border-bottom: solid 10px #D9A441;
+.bureau {
+    position: relative;
+    padding: 100px 20px;
+    background:
+        linear-gradient(rgba(4, 25, 45, 0.85), rgba(4, 25, 45, 0.85)),
+        url('WhatsApp Image 2026-05-12 at 23.34.04.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    overflow: hidden;
+}
 
-        }
+.bureau-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
 
-        .bureau-card:hover {
-            transform: translateY(-10px);
-        }
+.bureau-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: 0.4s;
+    border-bottom: solid 8px #D9A441;
+}
 
-        .bureau-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-        }
+.bureau-card:hover {
+    transform: translateY(-8px);
+}
 
-        .bureau-content {
-            padding: 30px;
-            text-align: center;
-        }
+.bureau-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
 
-        .bureau-content h3 {
-            font-size: 26px;
-            color: #0B3C5D;
-            margin-bottom: 10px;
-        }
+.bureau-content {
+    padding: 25px 20px;
+    text-align: center;
+}
 
-        .role {
-            color: #D9A441;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+.bureau-content h3 {
+    font-size: 24px;
+    color: #0B3C5D;
+    margin-bottom: 10px;
+}
 
-        .bureau-content p {
-            line-height: 1.8;
-            color: #555;
-        }
+.role {
+    color: #D9A441;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* ================= TABLETTE ================= */
+
+@media(max-width:768px){
+
+    .bureau{
+        padding:80px 15px;
+        background-attachment: scroll;
+    }
+
+    .bureau-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap:20px;
+    }
+
+    .bureau-card img{
+        height:250px;
+    }
+
+    .bureau-content{
+        padding:20px 15px;
+    }
+
+    .bureau-content h3{
+        font-size:20px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:580px){
+
+    .bureau-grid{
+        grid-template-columns:1fr;
+    }
+
+    .bureau-card{
+        max-width:350px;
+        margin:auto;
+        width:100%;
+    }
+
+    .bureau-card img{
+        height:300px;
+    }
+
+    .bureau-content h3{
+        font-size:22px;
+    }
+
+    .role{
+        font-size:14px;
+    }
+
+}
+
+       
+
+        
 
         .card:hover {
             transform: translateY(-10px);
