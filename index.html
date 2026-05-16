@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-          body {
+        body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -23,26 +23,27 @@
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-           .header-btn{
-            width:48px;
-            height:48px;
-            border-radius:50%;
-            background:#D9A441;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            color:black !important;
-            transition:0.3s;
-            box-shadow:0 5px 15px rgba(0,0,0,0.15);
-       }
 
-           .header-btn:hover{
-            transform:translateY(-4px) scale(1.05);
-            background:#0B3C5D;
-            color:white !important;
-       }   
+        .header-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #D9A441;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black !important;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
 
-        
+        .header-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: #0B3C5D;
+            color: white !important;
+        }
+
+
 
         #partenaires {
             background: #f7f7f7;
@@ -188,7 +189,7 @@
 
         }
 
-      
+
 
 
         header {
@@ -211,27 +212,28 @@
             align-items: center;
             position: relative;
         }
-       .logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    flex-shrink:0;
-}
 
-.logo span{
-    font-size:22px;
-    font-weight:800;
-    color:black;
-    white-space:nowrap;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
+        }
 
-.logo-img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #D9A441;
-}
+        .logo span {
+            font-size: 22px;
+            font-weight: 800;
+            color: black;
+            white-space: nowrap;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D9A441;
+        }
 
         /* MENU */
 
@@ -281,58 +283,58 @@
         }
 
         /* ================= MOBILE ================= */
-@media(max-width:1100px){
+        @media(max-width:1100px) {
 
-.navbar{
-    padding:12px 18px;
-}
+            .navbar {
+                padding: 12px 18px;
+            }
 
-.logo{
-    gap:10px;
-    max-width:80%;
-}
+            .logo {
+                gap: 10px;
+                max-width: 80%;
+            }
 
-.logo span{
-    font-size:15px;
-}
+            .logo span {
+                font-size: 15px;
+            }
 
-.logo-img{
-    width:48px;
-    height:48px;
-}
+            .logo-img {
+                width: 48px;
+                height: 48px;
+            }
 
-.menu-btn{
-    display:block;
-}
+            .menu-btn {
+                display: block;
+            }
 
-nav{
-    position:absolute;
-    top:100%;
-    right:15px;
-    width:260px;
-    flex:none;
-}
+            nav {
+                position: absolute;
+                top: 100%;
+                right: 15px;
+                width: 260px;
+                flex: none;
+            }
 
-nav ul{
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:18px;
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.12);
-}
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                background: white;
+                padding: 25px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            }
 
-nav ul.active{
-    display:flex;
-}
+            nav ul.active {
+                display: flex;
+            }
 
-nav a{
-    width:100%;
-    font-size:15px;
-}
-}
+            nav a {
+                width: 100%;
+                font-size: 15px;
+            }
+        }
 
         /* ================= PETITS TELEPHONES ================= */
 
@@ -515,123 +517,124 @@ nav a{
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 35px;
         }
+
         /* ================= BUREAU ================= */
 
-.bureau {
-    position: relative;
-    padding: 100px 20px;
-    background:
-        linear-gradient(rgba(4, 25, 45, 0.85), rgba(4, 25, 45, 0.85)),
-        url('WhatsApp Image 2026-05-12 at 23.34.04.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    overflow: hidden;
-}
+        .bureau {
+            position: relative;
+            padding: 100px 20px;
+            background:
+                linear-gradient(rgba(4, 25, 45, 0.85), rgba(4, 25, 45, 0.85)),
+                url('WhatsApp Image 2026-05-12 at 23.34.04.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            overflow: hidden;
+        }
 
-.bureau-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
+        .bureau-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
 
-.bureau-card {
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    transition: 0.4s;
-    border-bottom: solid 8px #D9A441;
-}
+        .bureau-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: 0.4s;
+            border-bottom: solid 8px #D9A441;
+        }
 
-.bureau-card:hover {
-    transform: translateY(-8px);
-}
+        .bureau-card:hover {
+            transform: translateY(-8px);
+        }
 
-.bureau-card img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    display: block;
-}
+        .bureau-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
 
-.bureau-content {
-    padding: 25px 20px;
-    text-align: center;
-}
+        .bureau-content {
+            padding: 25px 20px;
+            text-align: center;
+        }
 
-.bureau-content h3 {
-    font-size: 24px;
-    color: #0B3C5D;
-    margin-bottom: 10px;
-}
+        .bureau-content h3 {
+            font-size: 24px;
+            color: #0B3C5D;
+            margin-bottom: 10px;
+        }
 
-.role {
-    color: #D9A441;
-    font-weight: 700;
-    font-size: 15px;
-}
+        .role {
+            color: #D9A441;
+            font-weight: 700;
+            font-size: 15px;
+        }
 
-/* ================= TABLETTE ================= */
+        /* ================= TABLETTE ================= */
 
-@media(max-width:768px){
+        @media(max-width:768px) {
 
-    .bureau{
-        padding:80px 15px;
-        background-attachment: scroll;
-    }
+            .bureau {
+                padding: 80px 15px;
+                background-attachment: scroll;
+            }
 
-    .bureau-grid{
-        grid-template-columns: repeat(2,1fr);
-        gap:20px;
-    }
+            .bureau-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
 
-    .bureau-card img{
-        height:250px;
-    }
+            .bureau-card img {
+                height: 250px;
+            }
 
-    .bureau-content{
-        padding:20px 15px;
-    }
+            .bureau-content {
+                padding: 20px 15px;
+            }
 
-    .bureau-content h3{
-        font-size:20px;
-    }
+            .bureau-content h3 {
+                font-size: 20px;
+            }
 
-}
+        }
 
-/* ================= MOBILE ================= */
+        /* ================= MOBILE ================= */
 
-@media(max-width:580px){
+        @media(max-width:580px) {
 
-    .bureau-grid{
-        grid-template-columns:1fr;
-    }
+            .bureau-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .bureau-card{
-        max-width:350px;
-        margin:auto;
-        width:100%;
-    }
+            .bureau-card {
+                max-width: 350px;
+                margin: auto;
+                width: 100%;
+            }
 
-    .bureau-card img{
-        height:300px;
-    }
+            .bureau-card img {
+                height: 300px;
+            }
 
-    .bureau-content h3{
-        font-size:22px;
-    }
+            .bureau-content h3 {
+                font-size: 22px;
+            }
 
-    .role{
-        font-size:14px;
-    }
+            .role {
+                font-size: 14px;
+            }
 
-}
+        }
 
-       
 
-        
+
+
 
         .card:hover {
             transform: translateY(-10px);
@@ -739,7 +742,7 @@ nav a{
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: 0.4s;
-             border-bottom: solid 13px #D9A441;
+            border-bottom: solid 13px #D9A441;
         }
 
         .event-card:hover {
@@ -964,10 +967,8 @@ nav a{
                     <li><a href="#events">Attentes</a></li>
                     <li><a href="#bureau">Equipes</a></li>
                     <li><a href="#contact">Contact</a></li>
-                      <li>
-                        <a  href="https://ee.kobotoolbox.org/single/XNtkqW6a"
-                           target="_blank"
-                           class="header-btn">
+                    <li>
+                        <a href="https://ee.kobotoolbox.org/single/XNtkqW6a" target="_blank" class="header-btn">
                             <i style="font-size: x-large;" class="fa-solid fa-user-plus"></i>
                         </a>
                     </li>
@@ -1134,7 +1135,8 @@ nav a{
                 <div class="card">
                     <div class="icon">🗳️</div>
                     <h3>Plaidoyer citoyen</h3>
-                    <p>Mener des plaidoyers pour une meilleure prise en compte des citoyens dans les politiques publiques
+                    <p>Mener des plaidoyers pour une meilleure prise en compte des citoyens dans les politiques
+                        publiques
                         locales.</p>
                 </div>
 
