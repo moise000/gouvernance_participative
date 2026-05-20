@@ -42,6 +42,24 @@
             background: #0B3C5D;
             color: white !important;
         }
+        .hover-text {
+            position: absolute;
+            bottom: -35px;
+            background: #000;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .header-btn:hover .hover-text {
+            opacity: 1;
+            visibility: visible;
+        }
 
 
 
@@ -969,8 +987,10 @@
                     <li><a href="#bureau">Equipes</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <a href="https://ee.kobotoolbox.org/single/XNtkqW6a" target="_blank" class="header-btn">
+                       <a href="https://ee.kobotoolbox.org/single/XNtkqW6a" target="_blank" class="header-btn">
                             <i style="font-size: x-large;" class="fa-solid fa-user-plus"></i>
+
+                            <span class="hover-text">Veuillez remplir ce formulaire pour rejoindre le club</span>
                         </a>
                     </li>
                 </ul>
